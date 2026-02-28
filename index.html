@@ -1,435 +1,159 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Josefa Emilia Toledo Murillo</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-<style>
-
-body{
-    margin:0;
-    font-family:'Playfair Display', serif;
-    background:#f4ecd8;
-    color:#3e2f1c;
-}
-
-header{
-    background:#5a3e2b;
-    padding:40px;
-    text-align:center;
-    color:#f4ecd8;
-}
-
-header h1{
-    font-size:42px;
-    margin-bottom:10px;
-}
-
-.menu-icon{
-    position:absolute;
-    top:20px;
-    right:20px;
-    font-size:30px;
-    cursor:pointer;
-}
-
-nav{
-    display:none;
-    background:#7a5c3a;
-    text-align:center;
-}
-
-nav a{
-    display:block;
-    padding:15px;
-    color:#f4ecd8;
-    text-decoration:none;
-    font-weight:bold;
-}
-
-nav a:hover{
-    background:#5a3e2b;
-}
-
-section{
-    padding:70px 25px;
-    text-align:center;
-}
-
-.card{
-    background:#fff8e7;
-    padding:40px;
-    border-radius:10px;
-    max-width:1100px;
-    margin:auto;
-    box-shadow:0 10px 25px rgba(0,0,0,0.15);
-}
-
-h2{
-    color:#5a3e2b;
-    font-size:32px;
-}
-
-h3{
-    margin-top:30px;
-    color:#7a5c3a;
-}
-
-p{
-    line-height:1.9;
-    text-align:justify;
-}
-
-img{
-    width:260px;
-    border-radius:8px;
-    margin:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.2);
-}
-
-.gallery{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-}
-
-.quote{
-    background:#f3e6c8;
-    padding:20px;
-    margin:20px 0;
-    border-left:6px solid #7a5c3a;
-    font-style:italic;
-}
-
-/* TIMELINE */
-
-.timeline{
-    position:relative;
-    max-width:900px;
-    margin:auto;
-}
-
-.timeline::before{
-    content:"";
-    position:absolute;
-    left:50%;
-    width:4px;
-    height:100%;
-    background:#7a5c3a;
-}
-
-.timeline-item{
-    width:50%;
-    padding:20px 40px;
-    position:relative;
-}
-
-.timeline-item:nth-child(odd){
-    left:0;
-    text-align:right;
-}
-
-.timeline-item:nth-child(even){
-    left:50%;
-}
-
-.timeline-content{
-    background:#f9f1dc;
-    padding:20px;
-    border-radius:8px;
-    transition:0.4s;
-}
-
-.timeline-content:hover{
-    transform:scale(1.05);
-    background:#f3e6c8;
-}
-
-button{
-    padding:12px 25px;
-    background:#7a5c3a;
-    color:white;
-    border:none;
-    border-radius:6px;
-    cursor:pointer;
-    margin-top:20px;
-}
-
-button:hover{
-    background:#5a3e2b;
-}
-
-.extra{
-    display:none;
-    margin-top:20px;
-}
-
-footer{
-    background:#5a3e2b;
-    color:#f4ecd8;
-    padding:25px;
-    text-align:center;
-}
-
-@media screen and (max-width:768px){
-.timeline::before{left:20px;}
-.timeline-item{width:100%; left:0; text-align:left; padding-left:60px;}
-.gallery{flex-direction:column;}
-}
-
-</style>
+  <title>Josefa Toledo de Aguerri - Proyecto Educativo</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
 
-<header>
-<div class="menu-icon" onclick="toggleMenu()">☰</div>
-<h1>Josefa Toledo de Aguerri</h1>
-<p>Pionera del Feminismo, la Educación y la Modernización Pedagógica en Nicaragua</p>
-</header>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Josefa Toledo</div>
+      <ul class="nav-links">
+        <li data-section="inicio" class="active">Inicio</li>
+        <li data-section="biografia">Biografía</li>
+        <li data-section="gesta">Gesta/Aporte</li>
+        <li data-section="valores">Valores</li>
+        <li data-section="galeria">Galería</li>
+        <li data-section="bibliografia">Bibliografía</li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
 
-<nav id="menu">
-<a href="#biografia">Biografía</a>
-<a href="#contexto">Contexto Histórico</a>
-<a href="#pensamiento">Pensamiento</a>
-<a href="#aportes">Aportes</a>
-<a href="#frases">Frases</a>
-<a href="#galeria">Galería</a>
-<a href="#linea">Línea de Tiempo</a>
-<a href="#legado">Legado</a>
-</nav>
+ <main>
 
-<section id="biografia">
-<div class="card">
-<h2>Biografía Completa</h2>
+  <section id="inicio" class="active section">
+    <div class="hero">
+      <video autoplay muted loop id="hero-video">
+        <source src="assets/videos/video de josefa toledo .mp4" type="video/mp4">
+      </video>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Josefa Toledo de Aguerri</h1>
+        <p>Pionera de la educación y defensora de los derechos de la mujer en Nicaragua</p>
+        <button id="btn-descubre">Descubre más</button>
+      </div>
+    </div>
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Josefa_Toledo_de_Aguerri.jpg">
+    <div class="cards">
+      <div class="card card-media">
+        <img src="assets/imagenes/josefa toledo imagen 1.jpeg" alt="Josefa Toledo de Aguerri">
+        <div class="card-content">
+          <h2>Introducción</h2>
+          <p>
+            ¿Quién fue Josefa Toledo de Aguerri? Josefa Toledo de Aguerri fue una educadora, escritora y defensora de los derechos de la mujer en Nicaragua. Dedicó su vida a mejorar la educación, promover la cultura y luchar por una sociedad más justa, donde las mujeres tuvieran acceso a la educación y participación en la vida pública.
+          </p>
+        </div>
+      </div>
 
-<p>
-Josefa Emilia Toledo Murillo nació el 21 de abril de 1866 en Juigalpa, Chontales. 
-Desde joven enfrentó dificultades económicas tras la muerte de su padre, lo que fortaleció su carácter y su vocación por la educación.
-</p>
+      <div class="card">
+        <h2>Biografía</h2>
+        <p>
+          Nació en Nicaragua y se destacó como una de las primeras mujeres en liderar cambios en la educación del país. Fue maestra, directora y promotora de nuevas ideas pedagógicas, enfocadas en formar ciudadanos críticos y responsables.
+        </p>
+      </div>
 
-<p>
-Se formó en el Colegio de Señoritas de Granada, donde destacó por su disciplina y pensamiento crítico. 
-Su formación incluyó ciencias, literatura, filosofía y pedagogía moderna.
-</p>
+      <div class="card">
+        <h2>¿Quién fue?</h2>
+        <p>
+          Fue una pionera del feminismo en Nicaragua y una figura clave en la modernización educativa. Su trabajo ayudó a que más mujeres accedieran a la educación y a espacios de participación social.
+        </p>
+      </div>
 
-<p>
-Durante más de 50 años dedicó su vida a la enseñanza, la reforma educativa y la defensa de los derechos de la mujer.
-Falleció en Managua el 27 de abril de 1962, dejando un legado trascendental.
-</p>
+      <div class="card">
+        <h2>Gestos y aportes</h2>
+        <p>
+          Impulsó reformas educativas, defendió la educación laica y promovió la participación de la mujer en la sociedad. También escribió artículos y ensayos sobre educación, cultura y derechos femeninos.
+        </p>
+      </div>
 
-</div>
-</section>
+      <div class="card">
+        <h2>Valores y legado</h2>
+        <p>
+          Su legado vive en la educación nicaragüense y en la lucha por la igualdad de oportunidades. Representa valores como la perseverancia, la justicia social, el compromiso con la educación y el empoderamiento femenino.
+        </p>
+      </div>
 
-<section id="contexto">
-<div class="card">
-<h2>Contexto Histórico</h2>
+      <div class="card">
+        <h2>Galería</h2>
+        <div class="gallery">
+          <img src="assets/imagenes/josefa toledo imagen 3 .jpeg" alt="Imagen 1">
+          <img src="assets/imagenes/josefa toledo imagen 5.jpeg" alt="Imagen 2">
+          <img src="assets/imagenes/josefa toledo imagen 6 .jpeg" alt="Imagen 3">
+        </div>
+      </div>
 
-<p>
-Vivió en una época donde la educación femenina estaba limitada principalmente al hogar.
-Las mujeres no tenían derecho al voto ni participación política activa.
-</p>
+      <div class="card">
+        <h2>Línea de tiempo</h2>
+        <ul class="timeline">
+          <li><strong>1866:</strong> Nace en Nicaragua.</li>
+          <li><strong>1890 – 1910:</strong> Inicia su labor educativa.</li>
+          <li><strong>1910 – 1930:</strong> Promueve reformas educativas.</li>
+          <li><strong>1962:</strong> Fallece dejando un legado.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-<p>
-En este contexto conservador, Josefa promovió ideas modernas basadas en la igualdad intelectual
-y la formación científica de la mujer.
-</p>
+  <section id="biografia" class="section">
+    <h1>Biografía de Josefa Toledo de Aguerri</h1>
+    <p>
+      Josefa Toledo de Aguerri (1866–1962) fue una destacada educadora, escritora y pionera del feminismo en Nicaragua, nacida en Juigalpa, que dedicó su vida a transformar la educación y a defender los derechos de las mujeres en una época marcada por fuertes limitaciones para su participación social; desde joven se formó como maestra y desarrolló una intensa labor pedagógica y cultural, promoviendo una educación moderna, científica y cívica para niñas y jóvenes, convencida de que el progreso del país dependía de la formación integral de las mujeres; impulsó la creación y mejora de instituciones educativas, fomentó la profesionalización del magisterio y promovió métodos de enseñanza que fortalecieran el pensamiento crítico y la responsabilidad social; a través de artículos, ensayos y conferencias denunció la desigualdad de género, cuestionó los roles tradicionales impuestos a la mujer y defendió su derecho a la educación, al trabajo y a la participación en la vida pública, convirtiéndose en una de las voces femeninas más influyentes del país; además, participó activamente en espacios culturales y cívicos, promoviendo valores de ciudadanía, ética y modernización social, por lo que su legado se reconoce hoy como fundamental para el avance de la educación femenina, la conciencia social y la lucha por la igualdad de derechos en Nicaragua..
+    </p>
+  </section>
 
-</div>
-</section>
+  <section id="gesta" class="section">
+    <h1>Gesta o Aporte Principal</h1>
+    <p>
+      La gesta y los aportes de Josefa Toledo de Aguerri se expresan en una vida entera dedicada a transformar la educación y a abrir caminos de igualdad para las mujeres en Nicaragua, en un contexto histórico donde su acceso al estudio, al trabajo intelectual y a la participación pública era limitado; desde su labor como maestra y promotora cultural impulsó una educación moderna, laica y científica para niñas y jóvenes, defendiendo que la formación femenina debía ir más allá de los roles domésticos y preparar a las mujeres para ser ciudadanas críticas, profesionales y participantes activas en la sociedad; trabajó por la profesionalización del magisterio, promovió mejores métodos pedagógicos, la formación cívica y moral, y el fortalecimiento de instituciones educativas, al tiempo que utilizó la escritura y la palabra pública para denunciar la desigualdad de género, cuestionar prejuicios sociales y proponer reformas que ampliaran los derechos de las mujeres a la educación, al trabajo y a la vida cultural; su gesta fue también cultural y social, pues articuló redes de pensamiento, fomentó el debate intelectual y defendió una visión de país más justo y moderno, dejando un legado duradero que contribuyó a sentar las bases del movimiento feminista nicaragüense y a consolidar la educación femenina como un pilar del desarrollo nacional.
+    </p>
+  </section>
 
-<section id="pensamiento">
-<div class="card">
-<h2>Pensamiento Pedagógico</h2>
+  <section id="valores" class="section">
+    <h1>Valores y Legado</h1>
+    <p>
+      Los valores y el legado de Josefa Toledo de Aguerri se reflejan en su firme compromiso con la educación como motor de transformación social, en su profunda convicción de que la igualdad de oportunidades es un derecho y no un privilegio, y en su ética de servicio al país, pues dedicó su vida a formar personas críticas, responsables y conscientes de su papel en la sociedad; defendió la dignidad de la mujer frente a los prejuicios de su tiempo, promovió la justicia social, la libertad de pensamiento, el civismo y la participación ciudadana, y sostuvo que el conocimiento debía ponerse al servicio del bien común; su legado perdura en el fortalecimiento de la educación femenina, en la apertura de espacios para la participación intelectual y social de las mujeres, y en la inspiración que dejó a generaciones de maestras, estudiantes y líderes que continuaron la lucha por una sociedad más equitativa, demostrando que la constancia, la valentía y la educación pueden cambiar estructuras sociales profundamente arraigadas.
+    </p>
+  </section>
 
-<h3>Educación Integral</h3>
-<p>
-La educación debía formar mente, carácter y conciencia social.
-</p>
+  <section id="galeria" class="section">
+    <h1>Galería</h1>
+    <div class="gallery">
+      <img src="assets/imagenes/josefa toledo imagen 3 .jpeg" alt="Imagen 1">
+      <img src="assets/imagenes/josefa toledo imagen 5.jpeg" alt="Imagen 2">
+      <img src="assets/imagenes/josefa toledo imagen 6 .jpeg" alt="Imagen 3">
+    </div>
+  </section>
 
-<h3>Igualdad Intelectual</h3>
-<p>
-La mujer posee las mismas capacidades que el hombre.
-</p>
+  <section id="bibliografia" class="section">
+    <h1>Bibliografía</h1>
+    <ul>
+      <li><a href="https://www.unesco.org/es/education" target="_blank">UNESCO – Educación</a></li>
+      <li><a href="https://www.mineduc.gob.gt/" target="_blank">Ministerio de Educación</a></li>
+      <li><a href="https://www.unicef.org/es/educacion" target="_blank">UNICEF – Educación</a></li>
+      <li><a href="https://www.britannica.com/" target="_blank">Encyclopaedia Britannica</a></li>
+      <li><a href="https://es.wikipedia.org/" target="_blank">Wikipedia (referencia general)</a></li>
+    </ul>
+  </section>
 
-<h3>Modernización</h3>
-<p>
-Impulsó métodos científicos y racionales en la enseñanza.
-</p>
+</main>
 
-</div>
-</section>
+  <footer>
+    PROYECTO EDUCATIVO UNI
+  </footer>
 
-<section id="aportes">
-<div class="card">
-<h2>Principales Aportes</h2>
-
-<p><strong>Reforma educativa femenina:</strong> Amplió el currículo incluyendo ciencias y formación profesional.</p>
-<p><strong>Escuela Feminista de La Prensa (1919):</strong> Promovió educación y conciencia social femenina.</p>
-<p><strong>Directora General (1924):</strong> Primera mujer en ocupar ese cargo en Nicaragua.</p>
-<p><strong>Defensa del voto femenino:</strong> Participó en debates y congresos regionales.</p>
-
-</div>
-</section>
-
-<section id="frases">
-<div class="card">
-<h2>Frases Destacadas</h2>
-
-<div class="quote">“La educación es la base del progreso de los pueblos.”</div>
-<div class="quote">“La mujer debe instruirse para servir a la sociedad.”</div>
-<div class="quote">“Un pueblo que educa a sus mujeres asegura su futuro.”</div>
-
-</div>
-</section>
-
-<section id="galeria">
-<div class="card">
-<h2>Galería Histórica</h2>
-
-<div class="gallery">
-<img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Josefa_Toledo_de_Aguerri.jpg">
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Granada_Nicaragua_Catedral.jpg/640px-Granada_Nicaragua_Catedral.jpg">
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Managua_1930.jpg/640px-Managua_1930.jpg">
-</div>
-
-</div>
-</section>
-
-<section id="linea">
-<div class="card">
-<h2>Línea de Tiempo Histórica</h2>
-
-<div class="timeline">
-
-<div class="timeline-item">
-<div class="timeline-content">
-<h3>1866 – Nacimiento</h3>
-<img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Josefa_Toledo_de_Aguerri.jpg">
-<p>
-Nace el 21 de abril de 1866 en Juigalpa, Chontales. Desde pequeña mostró una inteligencia 
-destacada y una profunda sensibilidad social. La muerte temprana de su padre marcó su vida, 
-fortaleciendo su carácter y su determinación por superarse mediante el estudio.
-</p>
-</div>
-</div>
-
-<div class="timeline-item">
-<div class="timeline-content">
-<h3>1883 – Formación Académica</h3>
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Granada_Nicaragua_Catedral.jpg/640px-Granada_Nicaragua_Catedral.jpg">
-<p>
-Ingresa al Colegio de Señoritas en Granada, uno de los pocos centros educativos 
-para mujeres en esa época. Allí amplía su formación en literatura, ciencias y pedagogía, 
-rompiendo los esquemas tradicionales que limitaban la educación femenina al hogar.
-</p>
-</div>
-</div>
-
-<div class="timeline-item">
-<div class="timeline-content">
-<h3>1890–1910 – Carrera Docente</h3>
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Managua_1930.jpg/640px-Managua_1930.jpg">
-<p>
-Durante estas décadas se consolida como educadora. Dirige centros escolares, 
-moderniza métodos de enseñanza y promueve una educación científica y racional. 
-Su trabajo comienza a influir en reformas educativas a nivel nacional.
-</p>
-</div>
-</div>
-
-<div class="timeline-item">
-<div class="timeline-content">
-<h3>1919 – Fundación de la Escuela Feminista</h3>
-<img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Josefa_Toledo_de_Aguerri.jpg">
-<p>
-Funda la Escuela Feminista de La Prensa, institución que promovía no solo educación 
-académica sino también conciencia social y formación profesional para mujeres. 
-Este proyecto fue revolucionario en una sociedad conservadora.
-</p>
-</div>
-</div>
-
-<div class="timeline-item">
-<div class="timeline-content">
-<h3>1924 – Directora General</h3>
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Managua_1930.jpg/640px-Managua_1930.jpg">
-<p>
-Se convierte en la primera mujer en ocupar el cargo de Directora General de 
-Instrucción Pública en Nicaragua. Desde este puesto impulsa reformas curriculares, 
-amplía la formación docente y fortalece la educación femenina.
-</p>
-</div>
-</div>
-
-<div class="timeline-item">
-<div class="timeline-content">
-<h3>Décadas de 1930–1950 – Defensa del Voto Femenino</h3>
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Granada_Nicaragua_Catedral.jpg/640px-Granada_Nicaragua_Catedral.jpg">
-<p>
-Participa activamente en congresos y debates centroamericanos defendiendo 
-el derecho de la mujer al voto y a la participación política. Su pensamiento 
-influyó en los movimientos que más tarde lograrían avances en los derechos civiles femeninos.
-</p>
-</div>
-</div>
-
-<div class="timeline-item">
-<div class="timeline-content">
-<h3>1962 – Fallecimiento</h3>
-<img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Josefa_Toledo_de_Aguerri.jpg">
-<p>
-Fallece el 27 de abril de 1962 en Managua. Su legado permanece vivo en la 
-historia educativa de Nicaragua como pionera del feminismo y la modernización pedagógica.
-</p>
-</div>
-</div>
-
-</div>
-</div>
-</section>
-
-<section id="legado">
-<div class="card">
-<h2>Legado</h2>
-
-<p>
-Es considerada una de las figuras más influyentes del pensamiento educativo y feminista nicaragüense.
-Su lucha abrió puertas para generaciones futuras.
-</p>
-
-<button onclick="mostrarMas()">Más información</button>
-
-<div class="extra" id="extraInfo">
-<p>
-Su influencia continúa siendo estudiada en universidades y centros educativos.
-Representa un símbolo de perseverancia, educación y justicia social.
-</p>
-</div>
-
-</div>
-</section>
-
-<footer>
-© 2026 Proyecto Educativo UNI
-</footer>
-
-<script>
-function toggleMenu(){
-    var menu = document.getElementById("menu");
-    menu.style.display = menu.style.display === "block" ? "none" : "block";
-}
-
-function mostrarMas(){
-    var extra = document.getElementById("extraInfo");
-    extra.style.display = extra.style.display === "block" ? "none" : "block";
-}
-</script>
-
+  <script src="js/app.js"></script>
 </body>
 </html>
